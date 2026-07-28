@@ -392,23 +392,12 @@
     </div>
 
     <script>
-        // Password hash (SHA-256): "family2026" = generated hash
-        // To generate hash: use online tool or: echo -n "family2026" | sha256sum
-        const PASSWORD_HASH = "7dce034e548b1e319664a6f0d28c30d61f3c5fb9765b76aa8c73bd5e391302fc";
+        const CORRECT_PASSWORD = "family2026";
         
-        async function sha256(message) {
-            const msgBuffer = new TextEncoder().encode(message);
-            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-            return hashHex;
-        }
-
-        async function authenticate() {
+        function authenticate() {
             const input = document.getElementById('passwordInput').value;
-            const hash = await sha256(input);
             
-            if (hash === PASSWORD_HASH) {
+            if (input === CORRECT_PASSWORD) {
                 document.getElementById('authScreen').style.display = 'none';
                 document.getElementById('content').classList.add('visible');
                 localStorage.setItem('auth', 'true');
