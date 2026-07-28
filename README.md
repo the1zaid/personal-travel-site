@@ -1,10 +1,9 @@
-# Family Travel Itinerary
+# Family Travel Documents
 
-Private travel itineraries and personal documents.
+Private travel itineraries and family planning documents.
 
-## Current Trips
-- **AZYP5H**: Family trip to London, Dublin, Toronto (July 29 - August 6, 2026)
+Secured with password protection. No login required — just enter password to view.
 
 ---
 
-Hosted on GitHub Pages for easy family sharing.
+Hosted on GitHub Pages.
